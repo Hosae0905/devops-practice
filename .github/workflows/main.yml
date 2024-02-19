@@ -17,9 +17,9 @@ jobs:
           key: ${{ secrets.SECRET }}
           port: ${{ secrets.PORT }}
           script: |
-            sudo rm -rf ./devops
+            sudo rm -rf ./devops-practice
             sudo git clone https://github.com/Hosae0905/devops-practice.git
-            sudo mv -f ./devops/*.html /var/www/html
+            sudo mv -f ./devops-practice/*.html /var/www/html
       
 
     
