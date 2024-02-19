@@ -1,0 +1,23 @@
+name: devops test
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest    ## 작업을 어디다가 실행할 것인지
+
+    steps:    ## 어떤 작업을 실행할 것인지
+      - name: get code from github
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 3.39.177.61
+          username: ubuntu
+          password: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            echo test > /tmp/abcd
+      
+
+    
