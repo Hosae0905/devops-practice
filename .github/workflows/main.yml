@@ -14,7 +14,7 @@ jobs:
         with:
           host: 3.39.177.61
           username: ubuntu
-          password: ${{ secrets.KEY }}
+          password: ${{ secrets.SECRET }}
           port: 22
           script: |
             echo test > /tmp/abcd
