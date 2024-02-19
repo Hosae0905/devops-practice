@@ -14,7 +14,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.SECRET }}
+          key: ${{ secrets.SECRET }}
           port: ${{ secrets.PORT }}
           script: |
             echo test > /tmp/abcd
